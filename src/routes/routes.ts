@@ -10,7 +10,6 @@ router.get('/users', userController.allUsers)
 router.post('/users/cadastro', userController.saveUser);
 router.delete('/users/del/:id', userController.deleteUser);
 router.get('/clientes', clienteController.findAllClientes);
-router.get('/teste', clienteController.findAllUsers);
 
 
 
