@@ -1,9 +1,8 @@
 import { Sequelize } from '../../node_modules/sequelize';
-import dotenv from 'dotenv';
 import * as tedious from 'tedious';
+import dotenv from 'dotenv';
 
-
-
+dotenv.config();
 
 
 //CONEXÃO COM BANCOTESTE
@@ -22,7 +21,7 @@ export const sequelize = new Sequelize(
     process.env.DB_USER as string,
     process.env.DB_PASS as string,
     {
-        host: process.env.DB_HOST,
+        host: process.env.DB_HOST as string,
         dialect: 'mssql',
         dialectModule: tedious,
         port: parseInt(process.env.DB_PORT as string),
